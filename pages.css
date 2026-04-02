@@ -1,0 +1,113 @@
+/* ================================================
+   LUXE ESTATES — Inner Pages Styles
+   ================================================ */
+
+/* ---- PAGE HERO ---- */
+.page-hero {
+  min-height: 50vh; display: flex; align-items: flex-end;
+  padding: 80px 60px; background: linear-gradient(135deg, #0A0A0A 30%, #1A1208);
+  position: relative; overflow: hidden; margin-top: 80px;
+}
+.page-hero-bg {
+  position: absolute; right: 0; top: 0; width: 45%; height: 100%;
+  background: url('../images/hero.jpg') center/cover;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%); opacity: 0.35;
+}
+.page-hero-content { position: relative; z-index: 2; }
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; color: var(--white);
+}
+
+/* ---- PROPERTIES PAGE ---- */
+.filter-bar {
+  display: flex; gap: 16px; padding: 32px 60px;
+  background: var(--dark2); border-bottom: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 10px 24px; font-size: 0.7rem; letter-spacing: 0.1em;
+  text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1);
+  background: transparent; color: var(--muted); cursor: pointer; transition: all 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+.filter-btn.active, .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+.all-properties { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 60px; }
+.prop-card-v2 { background: var(--dark2); overflow: hidden; transition: transform 0.3s; cursor: pointer; }
+.prop-card-v2:hover { transform: translateY(-8px); }
+.prop-card-v2 img { width: 100%; height: 250px; object-fit: cover; display: block; transition: transform 0.5s; }
+.prop-card-v2:hover img { transform: scale(1.05); }
+.prop-info { padding: 28px; }
+.prop-info .prop-tag { background: rgba(201,168,76,0.1); color: var(--gold); display: inline-block; margin-bottom: 14px; }
+.prop-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 6px; }
+.prop-info .prop-loc { margin-bottom: 16px; }
+.prop-meta { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.05); }
+.prop-price-v2 { font-size: 1.2rem; color: var(--gold); font-weight: 500; }
+.prop-spec-row { display: flex; gap: 12px; font-size: 0.65rem; color: var(--muted); }
+
+/* ---- ABOUT PAGE ---- */
+.about-split { display: grid; grid-template-columns: 1fr 1fr; margin-top: 80px; }
+.about-img-side {
+  background: url('../images/about.jpg') center/cover; min-height: 600px; position: relative;
+}
+.about-img-side::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.3); }
+.about-text-side {
+  background: var(--dark2); padding: 100px 80px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.about-text-side p { font-size: 0.88rem; color: var(--muted); line-height: 2; margin-bottom: 20px; }
+.about-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+  margin-top: 60px; padding-top: 60px; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.about-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); }
+.about-stat-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+
+.team-section { padding: 120px 60px; }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 80px; }
+.team-card { text-align: center; }
+.team-img { width: 100%; height: 320px; object-fit: cover; display: block; margin-bottom: 24px; filter: grayscale(20%); transition: filter 0.3s; }
+.team-card:hover .team-img { filter: grayscale(0); }
+.team-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 6px; }
+.team-role { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+
+/* ---- CONTACT PAGE ---- */
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; margin-top: 80px; }
+.contact-info-side {
+  background: linear-gradient(135deg, #0d0c07 0%, #1A1208 100%);
+  padding: 100px 80px; display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid rgba(201,168,76,0.1); min-height: 100vh;
+}
+.contact-info-side p { font-size: 0.8rem; color: var(--muted); line-height: 2; margin-bottom: 48px; }
+.contact-details { display: flex; flex-direction: column; gap: 32px; }
+.contact-item { display: flex; gap: 20px; align-items: flex-start; }
+.contact-icon { font-size: 1.2rem; color: var(--gold); margin-top: 2px; }
+.contact-item-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.contact-item-value { font-size: 0.85rem; color: var(--white); }
+.contact-form-side {
+  background: var(--dark2); padding: 100px 80px;
+  display: flex; flex-direction: column; justify-content: center; min-height: 100vh;
+}
+.contact-form-side h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; margin-bottom: 40px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { margin-bottom: 24px; }
+.form-group label { display: block; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08); color: var(--white);
+  padding: 14px 18px; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;
+  outline: none; transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--gold); }
+.form-group textarea { height: 120px; resize: none; }
+.form-group select option { background: var(--dark); }
+.form-submit {
+  width: 100%; padding: 18px; background: var(--gold); color: var(--dark);
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+  border: none; cursor: pointer; font-family: 'Montserrat', sans-serif;
+  font-weight: 600; transition: all 0.3s; margin-top: 8px;
+}
+.form-submit:hover { background: var(--gold-light); }
